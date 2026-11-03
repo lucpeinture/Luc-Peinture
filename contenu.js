@@ -15,14 +15,14 @@ const SITE = {
 
   // photo = images/services/NOM.jpg (à déposer dans le dossier images/services)
   services: [
-    { icone: "🖌️", titre: "Peinture intérieure", texte: "Des finitions impeccables pour un intérieur qui vous ressemble", photo: "images/services/peinture-interieure.png" },
-    { icone: "🏠", titre: "Peinture extérieure", texte: "Protégez et embellissez vos façades durablement", photo: "images/services/peinture-exterieure.png" },
-    { icone: "🧱", titre: "Enduits techniques", texte: "Des murs parfaits, plus de possibilités", photo: "images/services/enduits-techniques.png" },
-    { icone: "🌿", titre: "Papier peint / Tapisserie", texte: "Apportez du caractère à vos espaces", photo: "images/services/papier-peint.png" },
-    { icone: "✨", titre: "Peinture & enduits décoratifs", texte: "Sublimez vos murs avec des finitions uniques", photo: "images/services/enduits-decoratifs.png" },
-    { icone: "🪵", titre: "Pose de parquet", texte: "Stratifié, massif et sol PVC pour des sols durables et élégants", photo: "images/services/pose-parquet.png" },
-    { icone: "🛡️", titre: "Vitrification de parquets", texte: "Redonnez vie à vos sols et protégez-les durablement", photo: "images/services/vitrification.png" },
-    { icone: "🪟", titre: "Pose de toiles de verre", texte: "Une solution solide et élégante pour vos murs", photo: "images/services/toile-de-verre.png" }
+    { icone: "🖌️", titre: "Peinture intérieure", texte: "Des finitions impeccables pour un intérieur qui vous ressemble", photo: "images/services/peinture-interieure.jpg" },
+    { icone: "🏠", titre: "Peinture extérieure", texte: "Protégez et embellissez vos façades durablement", photo: "images/services/peinture-exterieure.jpg" },
+    { icone: "🧱", titre: "Enduits techniques", texte: "Des murs parfaits, plus de possibilités", photo: "images/services/enduits-techniques.jpg" },
+    { icone: "🌿", titre: "Papier peint / Tapisserie", texte: "Apportez du caractère à vos espaces", photo: "images/services/papier-peint.jpg" },
+    { icone: "✨", titre: "Peinture & enduits décoratifs", texte: "Sublimez vos murs avec des finitions uniques", photo: "images/services/enduits-decoratifs.jpg" },
+    { icone: "🪵", titre: "Pose de parquet", texte: "Stratifié, massif et sol PVC pour des sols durables et élégants", photo: "images/services/pose-parquet.jpg" },
+    { icone: "🛡️", titre: "Vitrification de parquets", texte: "Redonnez vie à vos sols et protégez-les durablement", photo: "images/services/vitrification.jpg" },
+    { icone: "🪟", titre: "Pose de toiles de verre", texte: "Une solution solide et élégante pour vos murs", photo: "images/services/toile-de-verre.jpg" }
   ],
 
   // Réalisations : photos nommées 01.jpg, 02.jpg, 03.jpg... dans images/realisations
