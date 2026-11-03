@@ -7,7 +7,7 @@ const SITE = {
 
   entreprise: {
     titre: "Notre entreprise",
-    accroche: "Peinture et rénovation sur Toulouse et villes proches"
+    accroche: "Peinture et rénovation sur Toulouse et villes proches",
     texte: [
       "15 ans d'expérience à votre service.",
       "Nous saurons vous accompagner dans vos projets, qu'il s'agisse de neuf comme de rénovation."
@@ -38,7 +38,7 @@ const SITE = {
     }
   },
   // Pour en ajouter : déposez la photo suivante et augmentez le nombre.
-  realisations: { titre: "Nos réalisations", dossier: "images/realisations/", nombre: 41, extension: "webp" },
+  realisations: { titre: "Nos réalisations", dossier: "images/realisations/", nombre: 40, extension: "webp" },
 
   // Photos « avant / après » (une image contenant les deux)
   avantApres: {
