@@ -26,6 +26,7 @@ const SITE = {
   ],
 
   // Réalisations : photos nommées 01.jpg, 02.jpg, 03.jpg... dans images/realisations
+  alts:{01.webp: "Salon peint avec des teintes intemporelles"}
   // Pour en ajouter : déposez la photo suivante et augmentez le nombre.
   realisations: { titre: "Nos réalisations", dossier: "images/realisations/", nombre: 41, extension: "webp" },
 
