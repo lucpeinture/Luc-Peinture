@@ -7,6 +7,7 @@ const SITE = {
 
   entreprise: {
     titre: "Notre entreprise",
+    accroche: "Peinture et rénovation sur Toulouse et villes proches"
     texte: [
       "15 ans d'expérience à votre service.",
       "Nous saurons vous accompagner dans vos projets, qu'il s'agisse de neuf comme de rénovation."
