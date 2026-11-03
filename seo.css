@@ -2,3 +2,18 @@
 .zones{max-width:1100px;margin:0 auto 12px;font-size:.85rem;line-height:1.5;color:#c9c9c9}
 .zones strong{color:#fff}
 dialog{margin:auto}
+
+.btn{display:inline-block;padding:12px 26px;border:0;border-radius:4px;background:var(--or);color:var(--marine);font:700 1rem "Source Sans 3",system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.btn:hover{background:#d9a841}
+.btn.sec{background:#e6e3dc}
+.cta{margin-top:24px}
+#devis{width:min(92vw,520px);overflow:auto;background:#fff;border-radius:8px;color:var(--encre)}
+#devis .cadre{padding:24px}
+#devis h2{font-size:2rem;margin-bottom:14px}
+#devis form{display:grid;gap:12px}
+#devis label{display:grid;gap:4px;font-size:.9rem;font-weight:600}
+#devis input,#devis select,#devis textarea{padding:10px;border:1px solid #bbb;border-radius:4px;font:inherit;font-weight:400}
+#devis button{display:inline-block}
+#devis .actions{display:flex;gap:10px;flex-wrap:wrap}
+#devis .rgpd{font-size:.8rem;color:#555}
+#devis .retour{min-height:1.4em;font-weight:600}

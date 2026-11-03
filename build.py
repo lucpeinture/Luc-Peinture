@@ -94,6 +94,25 @@ def construire(S):
 
     accroche = f'<p class="accroche">{e(E["accroche"])}</p>' if E.get("accroche") else ""
     zones = (f'<p class="zones"><strong>Zones d\'intervention :</strong> {e(", ".join(villes))}.</p>' if villes else "")
+    fs = str(C.get("formspree", "")).strip()
+    bouton = ('<p class="cta"><button class="btn" type="button" data-devis>Demande de devis</button></p>' if fs
+              else '<p class="cta"><a class="btn" href="#contact">Demande de devis</a></p>')
+    travaux = "".join(f'<option>{e(s["titre"])}</option>' for s in S["services"])
+    formulaire = (f'''<dialog id="devis" aria-labelledby="devis-titre"><div class="cadre">
+  <h2 id="devis-titre">Demande de devis</h2>
+  <form action="https://formspree.io/f/{e(fs)}" method="POST">
+    <label>Nom <input name="nom" required autocomplete="name"></label>
+    <label>Téléphone <input name="telephone" type="tel" autocomplete="tel"></label>
+    <label>E-mail <input name="email" type="email" required autocomplete="email"></label>
+    <label>Commune du chantier <input name="commune"></label>
+    <label>Type de travaux <select name="travaux"><option value="">Choisir…</option>{travaux}<option>Autre</option></select></label>
+    <label>Votre projet <textarea name="message" rows="4" required></textarea></label>
+    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+    <input type="hidden" name="_subject" value="Demande de devis – {e(nom)}">
+    <p class="rgpd">Ces informations servent uniquement à répondre à votre demande.</p>
+    <p class="retour" role="status" aria-live="polite"></p>
+    <div class="actions"><button class="btn" type="submit">Envoyer ma demande</button><button class="btn sec" type="button" data-fermer>Fermer</button></div>
+  </form></div></dialog>''' if fs else "")
     tel = e(C["telephone"].replace(" ", ""))
     meta_url = (f'<link rel="canonical" href="{e(url)}">\n<meta property="og:url" content="{e(url)}">\n'
                 f'<meta property="og:image" content="{e(url)}images/hero.jpg">\n' if url else "")
@@ -129,7 +148,7 @@ def construire(S):
   <p class="baseline">{e(S["baseline"])}</p>
 </header>
 <main>
-  <section id="entreprise" class="centre"><h2>{e(E["titre"])}</h2>{accroche}{"".join(f"<p>{e(t)}</p>" for t in E["texte"])}</section>
+  <section id="entreprise" class="centre"><h2>{e(E["titre"])}</h2>{accroche}{"".join(f"<p>{e(t)}</p>" for t in E["texte"])}{bouton}</section>
   <section id="services"><ul class="services">{services}</ul></section>
   <section id="realisations"><h2>{e(R["titre"])}</h2><div class="galerie">{galerie}</div></section>
   <section id="avant-apres"><h2>{e(AA["titre"])}</h2><div class="duo">{avant_apres}</div></section>
@@ -137,6 +156,7 @@ def construire(S):
     <p class="coord"><a href="tel:{tel}">{e(C["telephone"])}</a> · <a href="mailto:{e(C["email"])}">{e(C["email"])}</a></p><p>{e(C["zone"])}</p></section>
 </main>
 <footer>{zones}<p>© {datetime.date.today().year} {e(S["mentions"])}</p></footer>
+{formulaire}
 <dialog id="zoom"><img alt=""><button aria-label="Fermer">×</button></dialog>
 <script src="script.js"></script>
 </body>
