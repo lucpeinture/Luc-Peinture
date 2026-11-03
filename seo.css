@@ -1,3 +1,4 @@
 .accroche{font-size:1.3rem;font-weight:700;color:var(--marine);margin-bottom:10px}
 .zones{max-width:1100px;margin:0 auto 12px;font-size:.85rem;line-height:1.5;color:#c9c9c9}
 .zones strong{color:#fff}
+dialog{margin:auto}
