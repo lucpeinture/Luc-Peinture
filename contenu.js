@@ -55,7 +55,7 @@ const SITE = {
     titre: "Contact",
     texte: "Devis gratuit, n'hésitez pas à nous contacter.",
     telephone: "07 68 67 32 28",
-    email: "lucsanchez.peinture@gmail.com",
+    email: "contact@lsz-peinture.fr",
     formspree: "xljjzvwq",
     zone: "Intervention : Toulouse et alentours"
   },
