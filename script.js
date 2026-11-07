@@ -1,6 +1,6 @@
 // Agrandir une photo au clic (galerie et avant/après)
-const dlg = document.querySelector("#zoom"), big = dlg.querySelector("img");
-const ouvrir = ev => { const i = ev.target; if (i.tagName === "IMG" && i.closest(".galerie,.duo")) { big.src = i.src; big.alt = i.alt; dlg.showModal(); } };
+const dlg = document.querySelector("#zoom"), big = dlg.querySelector("img"), leg = dlg.querySelector(".legende");
+const ouvrir = ev => { const i = ev.target; if (i.tagName === "IMG" && i.closest(".galerie,.duo")) { big.src = i.src; big.alt = i.alt; const c = i.closest("figure"); const t = c && c.querySelector("figcaption"); leg.textContent = t ? t.textContent : ""; dlg.showModal(); } };
 document.addEventListener("click", ouvrir);
 document.addEventListener("keydown", ev => { if (ev.key === "Enter") ouvrir(ev); });
 dlg.addEventListener("click", () => dlg.close());

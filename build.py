@@ -88,8 +88,15 @@ def construire(S):
 
     fichiers = liste_photos(R["dossier"]) or [f'{i:02d}.{R.get("extension", "jpg")}' for i in range(1, R.get("nombre", 0) + 1)]
     alts = R.get("alts", {})
-    galerie = "".join(img(R["dossier"] + f, alts.get(f, f"Réalisation {i} – peinture et rénovation à {ville}"), 'tabindex="0" ')
-                      for i, f in enumerate(fichiers, 1))
+    TAB = 'tabindex="0" '
+
+    def vignette(i, f):
+        legende = alts.get(f)  # la légende affichée = la description saisie dans contenu.js
+        alt = legende or f"Réalisation {i} – peinture et rénovation à {ville}"
+        cap = f"<figcaption>{e(legende)}</figcaption>" if legende else ""
+        return f"<figure>{img(R['dossier'] + f, alt, TAB)}{cap}</figure>"
+
+    galerie = "".join(vignette(i, f) for i, f in enumerate(fichiers, 1))
     avant_apres = "".join(img(p, f"Avant / après {i} – {nom}", 'tabindex="0" ') for i, p in enumerate(AA["photos"], 1))
 
     accroche = f'<p class="accroche">{e(E["accroche"])}</p>' if E.get("accroche") else ""
@@ -157,7 +164,7 @@ def construire(S):
 </main>
 <footer>{zones}<p>© {datetime.date.today().year} {e(S["mentions"])}</p></footer>
 {formulaire}
-<dialog id="zoom"><img alt=""><button aria-label="Fermer">×</button></dialog>
+<dialog id="zoom"><img alt=""><p class="legende"></p><button aria-label="Fermer">×</button></dialog>
 <script src="script.js"></script>
 </body>
 </html>
