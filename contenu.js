@@ -60,5 +60,17 @@ const SITE = {
     zone: "Intervention : Toulouse et alentours"
   },
 
+  seo: {
+    url: "https://lsz-peinture.fr/",
+    nom: "Luc Sanchez Peinture",
+    nomCommercial: "Luc Peinture",
+    ville: "Toulouse",
+    region: "Occitanie",
+    titre: "Luc Sanchez Peinture – Peintre en bâtiment à Toulouse",
+    description: "Peintre en bâtiment à Toulouse et environs : peinture intérieure et extérieure, décoration, pose de parquet, rénovation. 15 ans d'expérience. Devis gratuit.",
+    metiers: ["Peintre en bâtiment", "Décorateur", "Pose de parquet", "Rénovation", "Peinture intérieure", "Peinture extérieure"],
+    villes: ["Aucamville", "Aussonne", "Balma", "Beauzelle", "Blagnac", "Bruguières", "Castanet-Tolosan", "Castelginest", "Colomiers", "Cornebarrieu", "Cugnaux", "Escalquens", "Fenouillet", "Fonsorbes", "Frouzins", "Labarthe-sur-Lèze", "Launaguet", "Léguevin", "L’Union", "Mondonville", "Muret", "Pibrac", "Plaisance-du-Touch", "Portet-sur-Garonne", "Quint-Fonsegrives", "Ramonville-Saint-Agne", "Roques", "Saint-Alban", "Saint-Jean", "Saint-Jory", "Saint-Orens-de-Gameville", "La Salvetat-Saint-Gilles", "Seysses", "Tournefeuille", "Villeneuve-Tolosane", "Toulouse"]
+  },
+
   mentions: "Luc Sanchez Peinture – SIRET : 885 380 766 00042"
 };
