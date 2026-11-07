@@ -37,8 +37,7 @@ const SITE = {
       "02.webp": "Description de la deuxième photo"
     }
   },
-  // Pour en ajouter : déposez la photo suivante et augmentez le nombre.
-  realisations: { titre: "Nos réalisations", dossier: "images/realisations/", nombre: 40, extension: "webp" },
+
 
   // Photos « avant / après » (une image contenant les deux)
   avantApres: {
